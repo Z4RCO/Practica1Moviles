@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu"
     tools:context=".MainActivity">
 
     <Button
@@ -13,6 +14,7 @@
         android:layout_height="74dp"
         android:layout_marginBottom="100dp"
         android:onClick="jugar"
+        android:soundEffectsEnabled="false"
         android:text="@string/buttonJugar"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +28,9 @@
         android:layout_marginTop="5dp"
         android:text="@string/puntos"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,12 +38,14 @@
 
     <TextView
         android:id="@+id/puntosText"
-        android:layout_width="136dp"
-        android:layout_height="58dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:text="@string/puntosText"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonJugar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -47,15 +53,34 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="336dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:fontFamily="@font/alfa_slab_one"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:text="@string/titulo"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/buttonSilenciar"
+        android:onClick="cambiarMusica"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
