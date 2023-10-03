@@ -18,23 +18,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        musica = MediaPlayer.create(this, R.raw.gunshot);
+        musica = MediaPlayer.create(this, R.raw.wildquest);
+
         musica.setLooping(true);
         musica.start();
         activo = true;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
     }
-
-
     public void jugar(View view){
         MediaPlayer mp = MediaPlayer.create(this,R.raw.correcto);
         mp.start();
 
         Intent intent = new Intent(this, PreguntasActivity.class);
+        musica.pause();
         startActivity(intent);
     }
 
