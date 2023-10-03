@@ -12,14 +12,24 @@ public class PreguntasActivity extends AppCompatActivity {
     private int puntos;
     private MediaPlayer musicaQuest;
 
+    private  boolean activo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas);
-        musicaQuest = MediaPlayer.create(this, R.raw.aquatic);
-
+        musicaQuest = MediaPlayer.create(this, R.raw.wind);
         musicaQuest.setLooping(true);
-        musicaQuest.start();
+
+        Intent intent = getIntent();
+
+        activo = intent.getBooleanExtra("musica",true);
+
+
+        if(!activo){
+            musicaQuest.pause();
+        }else{
+            musicaQuest.start();
+        }
 
         puntos = 0;
     }
@@ -27,6 +37,7 @@ public class PreguntasActivity extends AppCompatActivity {
     public void salir(View view){
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("puntos", puntos);
+        intent.putExtra("musica",activo);
         musicaQuest.pause();
 
         startActivity(intent);

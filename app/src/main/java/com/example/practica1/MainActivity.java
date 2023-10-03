@@ -15,15 +15,24 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer musica;
-    private boolean activo;
+    private boolean activo = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         musica = MediaPlayer.create(this, R.raw.wildquest);
 
         musica.setLooping(true);
-        musica.start();
-        activo = true;
+
+        Intent intent = getIntent();
+
+        activo = intent.getBooleanExtra("musica",true);
+
+
+        if(activo){
+            musica.start();
+        }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -33,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mp.start();
 
         Intent intent = new Intent(this, PreguntasActivity.class);
+        intent.putExtra("musica",activo);
         musica.pause();
         startActivity(intent);
     }
@@ -65,6 +75,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //TODO Parar música cuando cambie la Activity
+    //TODO Hacer que el boton coincida con el sonido al volver al main
 
 }
