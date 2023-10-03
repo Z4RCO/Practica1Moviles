@@ -2,6 +2,7 @@ package com.example.practica1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
@@ -34,6 +35,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PreguntasActivity.class);
         musica.pause();
         startActivity(intent);
+    }
+
+    @SuppressLint("")
+    public void salir(View view){
+        musica.stop();
+        finishAffinity();
+    }
+
+    public void sonidoTucan(View view){
+        MediaPlayer mp = MediaPlayer.create(this,R.raw.cuervo);
+        mp.start();
     }
 
     public void cambiarMusica(View view){

@@ -2,6 +2,8 @@
     <string name="app_name">Practica 1</string>
     <string name="puntosText">Puntuación: </string>
     <string name="buttonJugar">Jugar</string>
+    <string name="buttonSalir">Salir</string>
+    <string name="buttonTucan"> </string>
     <string name="titulo">Wild Quest</string>
     <string name="puntos">0</string>
     <string name="buttonVolver">Volver</string>
