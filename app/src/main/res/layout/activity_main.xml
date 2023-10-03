@@ -5,17 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/menu"
+    android:backgroundTint="#597C7C7C"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/buttonJugar"
-        style="@style/Widget.Material3.Button"
+        style="@android:style/TextAppearance.Material.Widget.Button.Borderless.Colored"
         android:layout_width="201dp"
         android:layout_height="74dp"
         android:layout_marginBottom="100dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:backgroundTintMode="add"
         android:onClick="jugar"
         android:soundEffectsEnabled="false"
         android:text="@string/buttonJugar"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,14 +78,16 @@
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/buttonSilenciar"
         android:onClick="cambiarMusica"
+        android:src="@drawable/sonido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

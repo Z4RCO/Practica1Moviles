@@ -3,9 +3,14 @@ package com.example.practica1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer musica;
@@ -20,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
     }
 
 
@@ -32,13 +39,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cambiarMusica(View view){
+        ImageButton boton = (ImageButton) view;
         if(activo){
             musica.pause();
             activo = false;
+            boton.setImageResource(R.drawable.silencio);
+
+
         }
         else{
             musica.start();
             activo = true;
+            boton.setImageResource(R.drawable.sonido);
+
         }
     }
 
