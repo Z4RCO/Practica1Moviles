@@ -71,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
+    }
+
     //TODO Hacer que el boton coincida con el sonido al volver al main
 
 }
