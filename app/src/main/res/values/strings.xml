@@ -8,8 +8,15 @@
     <string name="puntos">0</string>
     <string name="buttonVolver">Volver</string>
     <string name="buttonSilenciar">Silenciar música</string>
+    <string name="buttonSiguiente">Siguiente</string>
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="p1">p1</string>
     <string name="p2">p2</string>
+    <string name="p3">p3</string>
+    <string name="p4">p4</string>
+    <string name="p5">p5</string>
 
 </resources>
