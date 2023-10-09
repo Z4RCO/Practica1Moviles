@@ -1,9 +1,6 @@
 package com.example.practica1;
 
-import static com.example.practica1.R.id.next;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -16,8 +13,12 @@ public class PreguntasActivity extends AppCompatActivity {
     private int puntos;
     private MediaPlayer musicaQuest;
 
-    Pregunta1 p1;
-    Pregunta2 p2;
+    private Pregunta1 p1;
+    private Pregunta2 p2;
+    private Pregunta3 p3;
+    private Pregunta4 p4;
+    private Pregunta5 p5;
+    private int respuestas;
 
 
     private  boolean activo;
@@ -26,7 +27,7 @@ public class PreguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas);
         musicaQuest = MediaPlayer.create(this, R.raw.wind);
-        musicaQuest.setLooping(true);
+
 
         Intent intent = getIntent();
 
@@ -34,32 +35,53 @@ public class PreguntasActivity extends AppCompatActivity {
 
 
         if(!activo){
-            musicaQuest.pause();
+            if(musicaQuest.isPlaying())musicaQuest.pause();
         }else{
-            musicaQuest.start();
+            if(!musicaQuest.isPlaying())musicaQuest.start();
         }
+        musicaQuest.setLooping(true);
 
         puntos = 0;
 
-       p1 = new Pregunta1();
+       p1 = new Pregunta1(); //TODO cambiar por factory method
        p2 = new Pregunta2();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView,p1).commit();
+       p3 = new Pregunta3();
+       p4 = new Pregunta4();
+       p5 = new Pregunta5();
+       getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView,p1).commit();
     }
 
     public void next(View view){
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-        int id = view.getId();
-        if(id == R.id.next){
-            t.replace(R.id.fragmentContainerView,p2).commit();
+        respuestas++;
+        switch(respuestas){
+            case 1:
+                t.replace(R.id.fragmentContainerView,p2).commit();
+                break;
+            case 2:
+                t.replace(R.id.fragmentContainerView,p3).commit();
+                break;
+            case 3:
+                t.replace(R.id.fragmentContainerView,p4).commit();
+                break;
+            case 4:
+                t.replace(R.id.fragmentContainerView,p5).commit();
+                break;
+            default:
+                t.replace(R.id.fragmentContainerView,p1).commit();
+                respuestas = 0;
+                break;
         }
+
+
     }
 
-    public void salir(View view){
+    public void volver(View view){
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("puntos", puntos);
         intent.putExtra("musica",activo);
-        musicaQuest.pause();
-
+       if(musicaQuest.isPlaying())
+           musicaQuest.pause();
         startActivity(intent);
     }
 
