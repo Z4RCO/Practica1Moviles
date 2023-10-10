@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         musica.setLooping(true);
 
         System.out.println("Start Main");
+
         Intent intent = getIntent();
 
         boton = findViewById(R.id.Silenciar);
