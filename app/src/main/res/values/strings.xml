@@ -8,8 +8,54 @@
     <string name="puntos">0</string>
     <string name="buttonVolver">Volver</string>
     <string name="buttonSilenciar">Silenciar música</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="p1">p1</string>
-    <string name="p2">p2</string>
+    <string name="buttonSiguiente">Siguiente</string>
+
+
+
+    <!-- Pregunta 1 -->
+    <string name="p1">¿Cuál de los siguientes animales es un marsupial?</string>
+
+    <string name="r11">Koala</string> <!--Correcta-->
+    <string name="r12">Tigre</string>
+    <string name="r13">Lobo</string>
+    <string name="r14">Vaca</string>
+
+
+    <!--Pregunta 2-->
+    <string name="p2">¿Cuál es el animal más rápido del mundo?</string>
+
+    <string name="r21">Guepardo</string> <!--Correcta-->
+    <string name="r22">Águila</string>
+    <string name="r23">Caballo</string>
+    <string name="r24">Liebre</string>
+
+
+
+    <!--Pregunta 3-->
+    <string name="p3">¿Qué ave es conocida por su canto melodioso?</string>
+
+    <string name="r31">Cuervo</string>
+    <string name="r32">Gorrión</string>
+    <string name="r33">Ruiseñor</string> <!--Correcta-->
+    <string name="r34">Tucán</string>
+
+
+
+    <!-- Pregunta 4-->
+    <string name="p4">¿Cuál es el mamífero más grande del mundo?</string>
+
+    <string name="r41">Elefante</string>
+    <string name="r42">Ballena azul</string> <!-- Correcta-->
+    <string name="r43">Jirafa</string>
+    <string name="r44">Rinoceronte</string>
+
+
+    <!-- Pregunta 5-->
+    <string name="p5">¿Cuál de estos animales es venenoso?</string>
+
+    <string name="r51">Sapo</string> <!-- Correcta-->
+    <string name="r52">Rana</string>
+    <string name="r53">Salamandra</string>
+    <string name="r54">Tortuga</string>
 
 </resources>
