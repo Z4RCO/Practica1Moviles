@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Practica 1</string>
+    <string name="app_name">Wild Quest</string>
     <string name="puntosText">Puntuación: </string>
     <string name="buttonJugar">Jugar</string>
     <string name="buttonSalir">Salir</string>
