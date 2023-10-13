@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Create Main");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
     }
 
@@ -41,13 +43,14 @@ public class MainActivity extends AppCompatActivity {
         if(boton == null) System.out.println("BOTON ES NULL");
         activo = intent.getBooleanExtra("musica", true);
         if(activo){
-            System.out.println("hay musica");
             musica.start();
         }
         else{
-            System.out.println("No hay musica");
             boton.setImageResource(R.drawable.silencio);
         }
+
+        TextView tv = findViewById(R.id.puntos);
+        tv.setText(Integer.toString(intent.getIntExtra("puntos",0)));
     }
 
     public void jugar(View view){

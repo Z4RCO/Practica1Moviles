@@ -22,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/radioGroup4"
         android:layout_width="350sp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

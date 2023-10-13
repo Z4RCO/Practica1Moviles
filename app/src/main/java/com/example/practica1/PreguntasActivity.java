@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class PreguntasActivity extends AppCompatActivity {
@@ -43,7 +45,7 @@ public class PreguntasActivity extends AppCompatActivity {
 
         puntos = 0;
 
-       p1 = new Pregunta1(); //TODO cambiar por factory method
+       p1 = new Pregunta1();
        p2 = new Pregunta2();
        p3 = new Pregunta3();
        p4 = new Pregunta4();
@@ -53,9 +55,11 @@ public class PreguntasActivity extends AppCompatActivity {
 
     public void next(View view){
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        Button b = findViewById(R.id.nextButton);
         respuestas++;
         switch(respuestas){
             case 1:
+                p1.comprobarRespuesta();
                 t.replace(R.id.fragmentContainerView,p2).commit();
                 break;
             case 2:
@@ -65,24 +69,31 @@ public class PreguntasActivity extends AppCompatActivity {
                 t.replace(R.id.fragmentContainerView,p4).commit();
                 break;
             case 4:
+                p4.comprobarRespuesta();
                 t.replace(R.id.fragmentContainerView,p5).commit();
-                break;
-            default:
-                t.replace(R.id.fragmentContainerView,p1).commit();
-                respuestas = 0;
                 break;
         }
 
 
     }
 
+
     public void volver(View view){
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("puntos", puntos);
         intent.putExtra("musica",activo);
-       if(musicaQuest.isPlaying())
-           musicaQuest.pause();
+       if(musicaQuest.isPlaying())musicaQuest.pause();
+       intent.putExtra("puntos",puntos);
+
         startActivity(intent);
+    }
+
+    public void sumar(){
+        puntos += 3;
+    }
+
+    public void restar(){
+        puntos -= 2;
     }
 
 }
