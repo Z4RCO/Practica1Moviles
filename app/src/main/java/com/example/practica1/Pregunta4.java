@@ -13,8 +13,14 @@ import android.widget.Toast;
 
 public class Pregunta4 extends Fragment {
 
+    /**
+     * Referencia al RadioGroup del Fragment
+     */
     private RadioGroup grupo;
 
+    /**
+     * Referencia a la View del Fragment
+     */
     private View view;
 
     public Pregunta4() {
@@ -39,6 +45,10 @@ public class Pregunta4 extends Fragment {
         return view;
     }
 
+    /**
+     * Método que comprueba si la respuesta elegida es correcta.
+     * Muestra un popup en función del resultado
+     */
     public void comprobarRespuesta(){
         RadioButton selectedRadioButton = view.findViewById(grupo.getCheckedRadioButtonId());
         String respuestaSeleccionada = selectedRadioButton.getText().toString();

@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(Integer.toString(intent.getIntExtra("puntos",0)));
     }
 
+    /**
+     * Método que comienza la activity de las preguntas
+     * Añade al intent la información sobre la reproducción de la música
+     * @param view
+     */
     public void jugar(View view){
         MediaPlayer mp = MediaPlayer.create(this,R.raw.correcto);
         mp.start();
@@ -64,15 +69,28 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Cierra la Aplicación
+     * @param view Referencia a la View que llama al método
+     */
     public void salir(View view){
         musica.stop();
         finishAffinity();
     }
 
+    /**
+     * Método que reproduce el sonido del tucán
+     * @param view Referencia a la view que llama al método
+     */
     public void sonidoTucan(View view){
         tucan.start();
     }
 
+
+    /**
+     * Método para alternar la reproducción de la música
+     * @param view Referencia a la view que llama al método
+     */
     public void cambiarMusica(View view){
         ImageButton boton = (ImageButton) view;
         if(activo){
@@ -87,17 +105,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Si pulsas el botón de atrás en el menú se cierra la App
+     */
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         finishAffinity();
     }
 
-    @Override
-    protected void onStop() {
-        System.out.println("Stop Main");
-        super.onStop();
-    }
 
 
 

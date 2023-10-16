@@ -53,6 +53,11 @@ public class PreguntasActivity extends AppCompatActivity {
        getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView,p1).commit();
     }
 
+    /**
+     * Método que cambia el Fragment mostrado por el de la siguiente pregunta.
+     * si estás en la última pregunta, vuelve al menú
+     * @param view
+     */
     public void next(View view){
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
         Button b = findViewById(R.id.nextButton);
@@ -72,26 +77,41 @@ public class PreguntasActivity extends AppCompatActivity {
                 p4.comprobarRespuesta();
                 t.replace(R.id.fragmentContainerView,p5).commit();
                 break;
+            default:
+                volver(null);
         }
 
 
     }
 
 
+    /**
+     * Método que vuelve a la Main Activity
+     * Añade al intent información de puntos obtenidos, y reproducción de música
+     * @param view referencia a la view que llama al métoo
+     */
     public void volver(View view){
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("puntos", puntos);
         intent.putExtra("musica",activo);
-       if(musicaQuest.isPlaying())musicaQuest.pause();
-       intent.putExtra("puntos",puntos);
-
+       if(musicaQuest.isPlaying()){
+           musicaQuest.pause();
+       }
         startActivity(intent);
     }
 
+    /**
+     * Método que suma 3 puntos a los actuales
+     * Llamar cuando se acierta acierta una pregunta
+     */
     public void sumar(){
         puntos += 3;
     }
 
+    /**
+     * Método que resta 2 puntos a los actuales
+     * Llamar cuando se acierta acierta una pregunta
+     */
     public void restar(){
         puntos -= 2;
     }

@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="301dp"
+    android:layout_height="468dp"
     android:background="@color/white"
     tools:context=".Pregunta2">
 
@@ -22,10 +22,10 @@
 
     <ImageView
         android:id="@+id/r21"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/r21"
         android:src="@drawable/guepardo"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +33,10 @@
 
     <ImageView
         android:id="@+id/r22"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="35dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
         android:contentDescription="@string/r22"
         android:src="@drawable/aguila"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +44,10 @@
 
     <ImageView
         android:id="@+id/r23"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="170dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/r23"
         android:src="@drawable/caballo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,10 +55,10 @@
 
     <ImageView
         android:id="@+id/r24"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="170dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/r24"
         android:src="@drawable/liebre"
         app:layout_constraintBottom_toBottomOf="parent"
