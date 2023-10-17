@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/buttonSiguiente"
         android:onClick="next"
-        android:text="@string/nextButton"
+        android:text="@string/buttonSiguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

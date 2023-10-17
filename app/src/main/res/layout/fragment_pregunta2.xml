@@ -5,6 +5,7 @@
     android:layout_width="301dp"
     android:layout_height="468dp"
     android:background="@color/white"
+    android:onClick="pulsarImagen"
     tools:context=".Pregunta2">
 
     <TextView

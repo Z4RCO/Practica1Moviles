@@ -1,15 +1,20 @@
 <resources>
     <string name="app_name">Wild Quest</string>
     <string name="puntosText">Puntuación: </string>
-    <string name="buttonJugar">Jugar</string>
-    <string name="buttonSalir">Salir</string>
-    <string name="buttonTucan"> </string>
     <string name="titulo">Wild Quest</string>
     <string name="puntos">0</string>
+
+
+
+    <!--Botones-->
     <string name="buttonVolver">Volver</string>
     <string name="buttonSilenciar">Silenciar música</string>
     <string name="buttonSiguiente">Siguiente</string>
-    <string name="nextButton">Comprobar</string>
+    <string name="buttonJugar">Jugar</string>
+    <string name="buttonSalir">Salir</string>
+    <string name="buttonTucan"> </string>
+
+
 
 
 

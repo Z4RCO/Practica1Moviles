@@ -14,18 +14,13 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer musica;
     private MediaPlayer tucan;
     private boolean activo = true;
-    private int silencio = R.drawable.silencio;
-    private ImageButton boton;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("Create Main");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
 
     @Override
@@ -35,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
         musica = MediaPlayer.create(this, R.raw.wildquest);
         musica.setLooping(true);
 
-        System.out.println("Start Main");
-
         Intent intent = getIntent();
 
-        boton = findViewById(R.id.Silenciar);
-        if(boton == null) System.out.println("BOTON ES NULL");
+        ImageButton boton = findViewById(R.id.Silenciar);
         activo = intent.getBooleanExtra("musica", true);
         if(activo){
             musica.start();
@@ -56,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método que comienza la activity de las preguntas
      * Añade al intent la información sobre la reproducción de la música
-     * @param view
+     * @param view referencia a la view que llama al método
      */
     public void jugar(View view){
         MediaPlayer mp = MediaPlayer.create(this,R.raw.correcto);
@@ -113,12 +105,4 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
         finishAffinity();
     }
-
-
-
-
-
-
-    //TODO Hacer que el boton coincida con el sonido al volver al main
-
 }

@@ -4,25 +4,38 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 
 public class PreguntasActivity extends AppCompatActivity {
     private int puntos;
     private MediaPlayer musicaQuest;
 
+    /*
+     * Referencias a las preguntas
+     */
     private Pregunta1 p1;
     private Pregunta2 p2;
     private Pregunta3 p3;
     private Pregunta4 p4;
     private Pregunta5 p5;
+
+
+    /**
+     * Contador de preguntas respondidas
+     */
     private int respuestas;
 
 
+    /**
+     * Booleano para controlar la música
+     */
     private  boolean activo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +69,7 @@ public class PreguntasActivity extends AppCompatActivity {
     /**
      * Método que cambia el Fragment mostrado por el de la siguiente pregunta.
      * si estás en la última pregunta, vuelve al menú
-     * @param view
+     * @param view referencia a la view que llama a método
      */
     public void next(View view){
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
@@ -68,6 +81,7 @@ public class PreguntasActivity extends AppCompatActivity {
                 t.replace(R.id.fragmentContainerView,p2).commit();
                 break;
             case 2:
+                p2.comprobarRespuesta();
                 t.replace(R.id.fragmentContainerView,p3).commit();
                 break;
             case 3:
@@ -104,16 +118,24 @@ public class PreguntasActivity extends AppCompatActivity {
      * Método que suma 3 puntos a los actuales
      * Llamar cuando se acierta acierta una pregunta
      */
-    public void sumar(){
+    public void correcto(){
         puntos += 3;
+        MediaPlayer mp = MediaPlayer.create(this,R.raw.correcto);
+        mp.start();
     }
 
     /**
      * Método que resta 2 puntos a los actuales
      * Llamar cuando se acierta acierta una pregunta
      */
-    public void restar(){
+    public void incorrecto(){
         puntos -= 2;
+        MediaPlayer mp = MediaPlayer.create(this,R.raw.incorrecto);
+        mp.start();
     }
+
+
+
+
 
 }

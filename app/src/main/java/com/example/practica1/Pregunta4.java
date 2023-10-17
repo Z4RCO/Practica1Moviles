@@ -23,6 +23,11 @@ public class Pregunta4 extends Fragment {
      */
     private View view;
 
+    /**
+     * Referencia a la Activity
+     */
+    private PreguntasActivity activity;
+
     public Pregunta4() {
 
     }
@@ -51,17 +56,25 @@ public class Pregunta4 extends Fragment {
      */
     public void comprobarRespuesta(){
         RadioButton selectedRadioButton = view.findViewById(grupo.getCheckedRadioButtonId());
+        if(selectedRadioButton == null){
+            Toast.makeText(getActivity(), "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+            PreguntasActivity a = (PreguntasActivity)getActivity();
+            if(a != null)a.incorrecto();
+            return;
+        }
+
         String respuestaSeleccionada = selectedRadioButton.getText().toString();
         String respuestaCorrecta = "Ballena azul";
+
 
         if (respuestaSeleccionada.equals(respuestaCorrecta)) {
             Toast.makeText(getActivity(),"¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
-            a.sumar();
+            a.correcto();
         } else {
             Toast.makeText(getActivity(), "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
-            a.restar();
+            a.incorrecto();
         }
 
     }
