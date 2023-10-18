@@ -3,6 +3,7 @@
     <string name="puntosText">Puntuación: </string>
     <string name="titulo">Wild Quest</string>
     <string name="puntos">0</string>
+    <string name="respuesta">Selecciona una respuesta</string>
 
 
 
@@ -40,10 +41,12 @@
     <!--Pregunta 3-->
     <string name="p3">¿Qué ave es conocida por su canto melodioso?</string>
 
-    <string name="r31">Cuervo</string>
-    <string name="r32">Gorrión</string>
-    <string name="r33">Ruiseñor</string> <!--Correcta-->
-    <string name="r34">Tucán</string>
+    <string-array name="tus_elementos">
+        <item>Cuervo</item>
+        <item>Gorrión</item>
+        <item>Ruiseñor</item><!--Correcta-->
+        <item>Tucán</item>
+    </string-array>
 
 
 
@@ -63,5 +66,7 @@
     <string name="r52">Rana</string>
     <string name="r53">Salamandra</string>
     <string name="r54">Tortuga</string>
+
+
 
 </resources>

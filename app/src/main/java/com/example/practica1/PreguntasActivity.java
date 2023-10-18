@@ -86,6 +86,7 @@ public class PreguntasActivity extends AppCompatActivity {
                 t.replace(R.id.fragmentContainerView,p3).commit();
                 break;
             case 3:
+                p3.comprobarRespuesta();
                 t.replace(R.id.fragmentContainerView,p4).commit();
                 break;
             case 4:

@@ -12,8 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:text="@string/p1"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,30 +37,39 @@
         <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:fontFamily="@font/alfa_slab_one"
+            android:padding="2sp"
             android:text="@string/r11"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:padding="2sp"
             android:text="@string/r12"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:padding="2sp"
             android:text="@string/r13"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:padding="2sp"
             android:text="@string/r14"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

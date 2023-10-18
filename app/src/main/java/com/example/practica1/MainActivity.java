@@ -56,10 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, PreguntasActivity.class);
-        startActivity(intent,options.toBundle());
         intent.putExtra("musica",activo);
         if(musica.isPlaying())musica.pause();
-        startActivity(intent);
+        startActivity(intent, options.toBundle());
 
     }
 

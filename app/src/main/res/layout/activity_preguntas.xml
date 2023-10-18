@@ -9,12 +9,13 @@
 
     <ImageButton
         android:id="@+id/Volver"
-        android:layout_width="249dp"
-        android:layout_height="162dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/buttonVolver"
         android:onClick="volver"
+        android:scaleType="centerInside"
         android:src="@drawable/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,12 +41,15 @@
 
     <ImageButton
         android:id="@+id/siguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/buttonSiguiente"
         android:onClick="next"
+        android:scaleType="centerInside"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
         android:src="@drawable/siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
