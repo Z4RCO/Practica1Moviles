@@ -7,24 +7,29 @@
     android:background="@drawable/preguntas"
     tools:context=".PreguntasActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/Volver"
+        android:layout_width="249dp"
+        android:layout_height="162dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/buttonVolver"
         android:onClick="volver"
-        android:text="@string/buttonVolver"
+        android:src="@drawable/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ImageContrastCheck" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="com.example.practica1.Pregunta1"
         android:layout_width="301dp"
         android:layout_height="468dp"
+        android:background="@drawable/fondoquest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -32,16 +37,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 
-    <Button
-        android:id="@+id/nextButton"
+
+    <ImageButton
+        android:id="@+id/siguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/buttonSiguiente"
         android:onClick="next"
-        android:text="@string/buttonSiguiente"
+        android:src="@drawable/siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ImageContrastCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

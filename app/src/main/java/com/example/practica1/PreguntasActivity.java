@@ -10,6 +10,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
@@ -73,7 +74,7 @@ public class PreguntasActivity extends AppCompatActivity {
      */
     public void next(View view){
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-        Button b = findViewById(R.id.nextButton);
+        ImageButton b = findViewById(R.id.siguiente);
         respuestas++;
         switch(respuestas){
             case 1:

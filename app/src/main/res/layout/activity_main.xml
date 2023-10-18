@@ -12,10 +12,10 @@
     <Button
         android:id="@+id/buttonJugar"
         style="@android:style/TextAppearance.Material.Widget.Button.Borderless.Colored"
-        android:layout_width="201dp"
-        android:layout_height="74dp"
+        android:layout_width="192dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="100dp"
-        android:background="@android:drawable/alert_light_frame"
+        android:background="@drawable/texto"
         android:backgroundTintMode="add"
         android:onClick="jugar"
         android:soundEffectsEnabled="false"
@@ -24,7 +24,8 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/puntos"
@@ -58,10 +59,10 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="315dp"
+        android:layout_height="77dp"
         android:layout_marginTop="204dp"
-        android:background="@android:drawable/dialog_holo_light_frame"
+        android:background="@drawable/titulo"
         android:fontFamily="@font/alfa_slab_one"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
@@ -72,7 +73,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <ImageButton
         android:id="@+id/Silenciar"
@@ -92,8 +94,9 @@
 
     <Button
         android:id="@+id/buttonSalir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="48dp"
+        android:background="@drawable/texto"
         android:onClick="salir"
         android:text="@string/buttonSalir"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +107,7 @@
         app:layout_constraintVertical_bias="0.692" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/tucanBoton"
         android:layout_width="81dp"
         android:layout_height="74dp"
         android:background="@android:drawable/divider_horizontal_dark"

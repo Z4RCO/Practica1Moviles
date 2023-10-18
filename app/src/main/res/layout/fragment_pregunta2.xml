@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="301dp"
     android:layout_height="468dp"
-    android:background="@color/white"
+    android:background="@drawable/fondoquest"
     android:onClick="pulsarImagen"
-    tools:context=".Pregunta2">
+    tools:context=".Pregunta2"
+    tools:ignore="TextSizeCheck">
 
     <TextView
         android:id="@+id/textView"
@@ -30,7 +31,8 @@
         android:contentDescription="@string/r21"
         android:src="@drawable/guepardo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/r22"
@@ -63,6 +65,7 @@
         android:contentDescription="@string/r24"
         android:src="@drawable/liebre"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
