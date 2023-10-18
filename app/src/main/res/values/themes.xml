@@ -3,7 +3,15 @@
     <style name="Base.Theme.Practica1" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:windowActivityTransitions">true</item>
+
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="android:duration">7000</item>
+
     </style>
 
     <style name="Theme.Practica1" parent="Base.Theme.Practica1" />
+
 </resources>

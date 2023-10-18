@@ -2,12 +2,14 @@ package com.example.practica1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -51,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
      * @param view referencia a la view que llama al método
      */
     public void jugar(View view){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.correcto);
-        mp.start();
 
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, PreguntasActivity.class);
+        startActivity(intent,options.toBundle());
         intent.putExtra("musica",activo);
         if(musica.isPlaying())musica.pause();
         startActivity(intent);
