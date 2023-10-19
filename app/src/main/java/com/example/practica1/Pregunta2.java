@@ -1,20 +1,15 @@
 package com.example.practica1;
 
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
-import android.media.Image;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 public class Pregunta2 extends Fragment {
 
@@ -80,12 +75,7 @@ public class Pregunta2 extends Fragment {
     }
 
     private void setOnClick(ImageView i){
-        i.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pulsarImagen(i);
-            }
-        });
+        i.setOnClickListener(view -> pulsarImagen(i));
     }
     public void pulsarImagen(View view) {
         if(imagen != null)imagen.setBackground(null);
@@ -95,6 +85,5 @@ public class Pregunta2 extends Fragment {
         border.setStroke(5, Color.BLACK); // Ancho del borde y color del borde negro
         view.setBackground(border);
         view.setPadding(10, 10, 10, 10);
-
     }
 }

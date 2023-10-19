@@ -11,7 +11,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 
 public class PreguntasActivity extends AppCompatActivity {
+
+    /**
+     * Contador de puntos obtenidos
+     */
     private int puntos;
+
+    /**
+     * Reproductor de musica
+     */
     private MediaPlayer musicaQuest;
 
     /*

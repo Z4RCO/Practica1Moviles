@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView tv = findViewById(R.id.puntos);
-        tv.setText(Integer.toString(intent.getIntExtra("puntos",0)));
+        int num = intent.getIntExtra("puntos",0);
+        tv.setText(String.format(Integer.toString(num)));
     }
 
     /**

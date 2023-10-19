@@ -23,10 +23,6 @@ public class Pregunta4 extends Fragment {
      */
     private View view;
 
-    /**
-     * Referencia a la Activity
-     */
-    private PreguntasActivity activity;
 
     public Pregunta4() {
 
@@ -70,11 +66,11 @@ public class Pregunta4 extends Fragment {
         if (respuestaSeleccionada.equals(respuestaCorrecta)) {
             Toast.makeText(getActivity(),"¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
-            a.correcto();
+            if(a != null)a.correcto();
         } else {
             Toast.makeText(getActivity(), "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
-            a.incorrecto();
+            if(a != null)a.incorrecto();
         }
 
     }
