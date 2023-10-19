@@ -3,6 +3,7 @@ package com.example.practica1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
@@ -107,13 +108,14 @@ public class PreguntasActivity extends AppCompatActivity {
      * @param view referencia a la view que llama al métoo
      */
     public void volver(View view){
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("puntos", puntos);
         intent.putExtra("musica",activo);
        if(musicaQuest.isPlaying()){
            musicaQuest.pause();
        }
-        startActivity(intent);
+        startActivity(intent,options.toBundle());
     }
 
     /**
