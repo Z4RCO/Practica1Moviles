@@ -42,7 +42,7 @@ public class Pregunta1 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pregunta1, container, false);
 
-        grupo = view.findViewById(R.id.radioGroup4);
+        grupo = view.findViewById(R.id.radioGroup5);
         this.view = view;
         return view;
     }

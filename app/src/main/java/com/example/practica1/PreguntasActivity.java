@@ -1,18 +1,13 @@
 package com.example.practica1;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 
 public class PreguntasActivity extends AppCompatActivity {
@@ -75,7 +70,6 @@ public class PreguntasActivity extends AppCompatActivity {
      */
     public void next(View view){
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-        ImageButton b = findViewById(R.id.siguiente);
         respuestas++;
         switch(respuestas){
             case 1:
@@ -95,6 +89,7 @@ public class PreguntasActivity extends AppCompatActivity {
                 t.replace(R.id.fragmentContainerView,p5).commit();
                 break;
             default:
+                p5.comprobarRespuesta();
                 volver(null);
         }
 
