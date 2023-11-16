@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Registrar(null);
 
     }
 
@@ -113,28 +112,7 @@ public class MainActivity extends AppCompatActivity {
         finishAffinity();
     }
 
-    public void Registrar(View view){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Aplicacion", null, 1);
-        SQLiteDatabase BdD = admin.getWritableDatabase();
 
-        String pregunta = "¿Qué mamífero pone huevos?";
-        String respuesta1= "Lince";
-        String respuesta2= "Nutria";
-        String respuesta3= "Ornitorrinco";
-        String respuesta4= "Panda rojo";
-
-        ContentValues registro = new ContentValues();
-
-        registro.put("pregunta", pregunta);
-        registro.put("respuesta1", respuesta1);
-        registro.put("respuesta2", respuesta2);
-        registro.put("respuesta3", respuesta3);
-        registro.put("respuesta4", respuesta4);
-
-
-        BdD.insert("preguntas", null, registro);
-        BdD.close();
-    }
 
 
 

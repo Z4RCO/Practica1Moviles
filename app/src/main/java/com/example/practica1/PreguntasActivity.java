@@ -2,12 +2,16 @@ package com.example.practica1;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+
+import java.util.Random;
 
 
 public class PreguntasActivity extends AppCompatActivity {
@@ -47,6 +51,26 @@ public class PreguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas);
         musicaQuest = MediaPlayer.create(this, R.raw.wind);
+
+
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Aplicacion", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+        Cursor preguntas = db.rawQuery("select * from preguntas", null);
+        int i = 0;
+        Random r = new Random();
+        int count = preguntas.getCount();
+        while(i < 30){
+            int random = r.nextInt(count);
+            preguntas.moveToPosition(random);
+            System.out.println(preguntas.getString(0));
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+            }
+            i++;
+        }
+
+        preguntas.close();
 
 
         Intent intent = getIntent();
@@ -139,6 +163,8 @@ public class PreguntasActivity extends AppCompatActivity {
         puntos -= 2;
         MediaPlayer mp = MediaPlayer.create(this,R.raw.incorrecto);
         mp.start();
+
+
     }
 
 
