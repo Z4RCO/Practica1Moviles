@@ -8,14 +8,14 @@
     tools:context=".Pregunta1">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/p1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/alfa_slab_one"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="@string/p1"
+        android:text="werrttyu"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -31,11 +31,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/p1">
 
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/r11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
@@ -45,7 +45,7 @@
             android:textSize="28sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/r12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/alfa_slab_one"
@@ -54,7 +54,7 @@
             android:textSize="28sp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/r13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/alfa_slab_one"
@@ -63,7 +63,7 @@
             android:textSize="28sp" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/r14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/alfa_slab_one"
