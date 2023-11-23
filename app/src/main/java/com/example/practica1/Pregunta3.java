@@ -1,14 +1,22 @@
 package com.example.practica1;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Pregunta3 extends Fragment {
 
@@ -16,6 +24,10 @@ public class Pregunta3 extends Fragment {
      * Referencia al Spinner del Fragment
      */
     private Spinner spinner;
+
+    List<String> respuestas = new ArrayList<>();
+
+
 
 
 
@@ -40,10 +52,12 @@ public class Pregunta3 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pregunta3, container, false);
         this.spinner = view.findViewById(R.id.spinner);
 
+        setRespuestas(view);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.requireContext(), R.array.tus_elementos, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this.requireContext(), android.R.layout.simple_spinner_item, respuestas);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
 
         return view;
     }
@@ -73,5 +87,24 @@ public class Pregunta3 extends Fragment {
             if(a != null)a.incorrecto();
         }
 
+    }
+
+    private void setRespuestas(View view){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(view.getContext(), "Aplicacion", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+        Cursor preguntas = db.rawQuery("select * from preguntas", null);
+
+        Random r = new Random();
+        preguntas.moveToPosition(r.nextInt(preguntas.getCount()));
+
+        TextView t = view.findViewById(R.id.textView2);
+        t.setText(preguntas.getString(0));
+
+        respuestas.add(preguntas.getString(1));
+        respuestas.add(preguntas.getString(2));
+        respuestas.add(preguntas.getString(3));
+        respuestas.add(preguntas.getString(4));
+
+        preguntas.close();
     }
 }

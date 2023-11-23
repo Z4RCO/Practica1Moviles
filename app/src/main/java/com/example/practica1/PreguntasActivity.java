@@ -2,16 +2,14 @@ package com.example.practica1;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-
-import java.util.Random;
 
 
 public class PreguntasActivity extends AppCompatActivity {
@@ -146,5 +144,4 @@ public class PreguntasActivity extends AppCompatActivity {
 
     }
 
-    
 }

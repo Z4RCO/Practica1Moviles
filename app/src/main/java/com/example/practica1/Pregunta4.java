@@ -1,5 +1,7 @@
 package com.example.practica1;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,7 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 public class Pregunta4 extends Fragment {
 
@@ -43,6 +48,8 @@ public class Pregunta4 extends Fragment {
 
         grupo = view.findViewById(R.id.radioGroup5);
         this.view = view;
+
+        setRespuestas();
         return view;
     }
 
@@ -74,4 +81,34 @@ public class Pregunta4 extends Fragment {
         }
 
     }
+
+
+    public void setRespuestas(){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this.view.getContext(), "Aplicacion", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+        Cursor preguntas = db.rawQuery("select * from preguntas", null);
+
+
+        Random r = new Random();
+
+        preguntas.moveToPosition(r.nextInt(preguntas.getCount()));
+
+        TextView t = view.findViewById(R.id.p1);
+        t.setText(preguntas.getString(0));
+
+
+        RadioButton respuesta = view.findViewById(R.id.r11);
+        respuesta.setText(preguntas.getString(1));
+        respuesta = view.findViewById(R.id.r12);
+        respuesta.setText(preguntas.getString(2));
+        respuesta = view.findViewById(R.id.r13);
+        respuesta.setText(preguntas.getString(3));
+        respuesta = view.findViewById(R.id.r14);
+        respuesta.setText(preguntas.getString(4));
+
+        preguntas.close();
+    }
+
+
+
 }
