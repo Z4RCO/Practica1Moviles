@@ -18,6 +18,8 @@ import java.util.Random;
 
 public class Pregunta1 extends Fragment {
 
+
+
     /**
      * Referencia al RadioGroup del Fragment
      */
@@ -27,6 +29,9 @@ public class Pregunta1 extends Fragment {
      * Referencia a la View del Fragment
      */
     private View view;
+
+    int respuestaCorrecta;
+    int respuestaSeleccionada;
 
     public Pregunta1() {
     }
@@ -67,10 +72,8 @@ public class Pregunta1 extends Fragment {
             if(a != null)a.incorrecto();
             return;
         }
-        String respuestaSeleccionada = selectedRadioButton.getText().toString();
-        String respuestaCorrecta = "Koala";
 
-        if (respuestaSeleccionada.equals(respuestaCorrecta)) {
+        if (respuestaSeleccionada == respuestaCorrecta) {
             Toast.makeText(getActivity(),"¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
             if(a != null)a.correcto();
@@ -104,6 +107,10 @@ public class Pregunta1 extends Fragment {
         respuesta.setText(preguntas.getString(3));
         respuesta = view.findViewById(R.id.r14);
         respuesta.setText(preguntas.getString(4));
+
+        respuestaCorrecta = Integer.parseInt(preguntas.getString(5));
+        respuestaSeleccionada = Integer.parseInt(preguntas.getString(respuestaCorrecta));
+
 
         preguntas.close();
     }

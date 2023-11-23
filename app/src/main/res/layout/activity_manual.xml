@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/preguntas">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Agrega contenido, como TextViews -->
+        <TextView
+            android:layout_width="323dp"
+            android:layout_height="563dp"
+            android:text="Texto de ejemplo 1" />
+
+        <TextView
+            android:layout_width="395dp"
+            android:layout_height="693dp"
+            android:text="Texto de ejemplo 2" />
+
+        <!-- Agrega más elementos según sea necesario -->
+
+    </LinearLayout>
+</ScrollView>

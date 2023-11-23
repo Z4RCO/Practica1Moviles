@@ -6,7 +6,6 @@
     <string name="respuesta">Selecciona una respuesta</string>
 
 
-
     <!--Botones-->
     <string name="buttonVolver">Volver</string>
     <string name="buttonSilenciar">Silenciar música</string>
@@ -16,9 +15,6 @@
     <string name="buttonTucan"> </string>
     <string name="buttonManual">Manual</string>
     <string name="buttonAdd">Add</string>
-
-
-
 
 
     <!-- Pregunta 1 -->
@@ -39,7 +35,6 @@
     <string name="r24">Liebre</string>
 
 
-
     <!--Pregunta 3-->
     <string name="p3">¿Qué ave es conocida por su canto melodioso?</string>
 
@@ -49,7 +44,6 @@
         <item>Ruiseñor</item><!--Correcta-->
         <item>Tucán</item>
     </string-array>
-
 
 
     <!-- Pregunta 4-->
@@ -68,7 +62,6 @@
     <string name="r52">Rana</string>
     <string name="r53">Salamandra</string>
     <string name="r54">Tortuga</string>
-
 
 
 </resources>

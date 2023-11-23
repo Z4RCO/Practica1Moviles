@@ -130,7 +130,7 @@
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/buttonManual"
-        android:onClick="volver"
+        android:onClick="Manual"
         android:scaleType="centerInside"
         android:src="@drawable/conocimiento"
         app:layout_constraintBottom_toBottomOf="parent"

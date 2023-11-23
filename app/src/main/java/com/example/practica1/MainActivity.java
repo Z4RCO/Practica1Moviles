@@ -103,6 +103,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    * Entrar en el Manual
+     */
+
+    public void Manual(View view){
+
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
+        Intent intent = new Intent(this, ManualActivity.class);
+        intent.putExtra("musica",activo);
+        if(musica.isPlaying())musica.pause();
+        startActivity(intent, options.toBundle());
+
+    }
+
     /**
      * Si pulsas el botón de atrás en el menú se cierra la App
      */
