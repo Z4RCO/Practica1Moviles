@@ -10,7 +10,7 @@
     tools:ignore="TextSizeCheck">
 
     <TextView
-        android:id="@+id/p1"
+        android:id="@+id/p4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -35,7 +35,7 @@
         android:contentDescription="@string/r21"
         android:src="@drawable/guepardo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1"
+        app:layout_constraintTop_toBottomOf="@+id/p4"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
@@ -47,7 +47,7 @@
         android:contentDescription="@string/r22"
         android:src="@drawable/aguila"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1" />
+        app:layout_constraintTop_toBottomOf="@+id/p4" />
 
     <ImageView
         android:id="@+id/r23"

@@ -123,7 +123,41 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <ImageButton
+        android:id="@+id/Manual"
+        android:layout_width="80dp"
+        android:layout_height="63dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/buttonManual"
+        android:onClick="volver"
+        android:scaleType="centerInside"
+        android:src="@drawable/conocimiento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="ImageContrastCheck" />
 
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="80dp"
+        android:layout_height="63dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/buttonAdd"
+        android:onClick="volver"
+        android:scaleType="centerInside"
+        android:src="@drawable/addpregunta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        tools:ignore="ImageContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/p3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -26,7 +26,7 @@
         android:id="@+id/spinner"
         android:layout_width="200sp"
         android:layout_height="50sp"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/p3"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
         android:layout_marginTop="66dp" />
@@ -35,7 +35,7 @@
         android:id="@+id/eligeRespuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/p3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/alfa_slab_one"

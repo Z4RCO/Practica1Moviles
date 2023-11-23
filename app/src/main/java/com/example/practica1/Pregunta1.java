@@ -92,7 +92,7 @@ public class Pregunta1 extends Fragment {
 
         preguntas.moveToPosition(r.nextInt(preguntas.getCount()));
 
-        TextView t = view.findViewById(R.id.p1);
+        TextView t = view.findViewById(R.id.p4);
         t.setText(preguntas.getString(0));
 
 
