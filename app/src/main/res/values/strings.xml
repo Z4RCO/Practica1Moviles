@@ -4,6 +4,15 @@
     <string name="titulo">Wild Quest</string>
     <string name="puntos">0</string>
     <string name="respuesta">Selecciona una respuesta</string>
+    <string name="addPregunta">Añadir nueva pregunta</string>
+
+
+    <string name="escribirPregunta">Escribir pregunta</string>
+    <string name="respuesta1">Escribir respuesta 1</string>
+    <string name="respuesta2">Escribir respuesta 2</string>
+    <string name="respuesta3">Escribir respuesta 3</string>
+    <string name="respuesta4">Escribir respuesta 4</string>
+
 
 
     <!--Botones-->
@@ -13,8 +22,12 @@
     <string name="buttonJugar">Jugar</string>
     <string name="buttonSalir">Salir</string>
     <string name="buttonTucan"> </string>
+
     <string name="buttonManual">Manual</string>
     <string name="buttonAdd">Add</string>
+
+
+
 
 
     <!-- Pregunta 1 -->
@@ -35,6 +48,7 @@
     <string name="r24">Liebre</string>
 
 
+
     <!--Pregunta 3-->
     <string name="p3">¿Qué ave es conocida por su canto melodioso?</string>
 
@@ -44,6 +58,7 @@
         <item>Ruiseñor</item><!--Correcta-->
         <item>Tucán</item>
     </string-array>
+
 
 
     <!-- Pregunta 4-->
@@ -62,6 +77,7 @@
     <string name="r52">Rana</string>
     <string name="r53">Salamandra</string>
     <string name="r54">Tortuga</string>
+
 
 
 </resources>

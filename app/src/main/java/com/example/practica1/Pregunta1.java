@@ -30,8 +30,7 @@ public class Pregunta1 extends Fragment {
      */
     private View view;
 
-    int respuestaCorrecta;
-    int respuestaSeleccionada;
+    String respuestaCorrecta;
 
     public Pregunta1() {
     }
@@ -72,8 +71,8 @@ public class Pregunta1 extends Fragment {
             if(a != null)a.incorrecto();
             return;
         }
-
-        if (respuestaSeleccionada == respuestaCorrecta) {
+        String respuestaSeleccionada = String.valueOf(selectedRadioButton.getText());
+        if (respuestaCorrecta.equals(respuestaSeleccionada)) {
             Toast.makeText(getActivity(),"¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
             if(a != null)a.correcto();
@@ -108,8 +107,8 @@ public class Pregunta1 extends Fragment {
         respuesta = view.findViewById(R.id.r14);
         respuesta.setText(preguntas.getString(4));
 
-        respuestaCorrecta = Integer.parseInt(preguntas.getString(5));
-        respuestaSeleccionada = Integer.parseInt(preguntas.getString(respuestaCorrecta));
+        int correcto = Integer.parseInt(preguntas.getString(5));
+        respuestaCorrecta = preguntas.getString(correcto);
 
 
         preguntas.close();
