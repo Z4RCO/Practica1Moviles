@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C38155">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Agrega contenido, como TextViews -->
+
+
+        <TextView
+            android:id="@+id/Manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Manual"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/Menu"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Menu"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imgManual"
+            android:layout_width="match_parent"
+            android:layout_height="405dp"
+            android:backgroundTint="#FFFFFF"
+            android:backgroundTintMode="add"
+            app:srcCompat="@drawable/menuexplicacion"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/Sonido"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Sonido"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgSonido"
+            android:layout_width="177dp"
+            android:layout_height="66dp"
+            android:layout_margin="10dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/sonidomanual"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/imgSonidoMute"
+            android:layout_width="198dp"
+            android:layout_height="64dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/sonidomutemanual"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <TextView
+            android:id="@+id/txtSonido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtSonido"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/Addpreguntas"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/AddPregunta"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgAddPregunta"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/addpreguntamanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtAddPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtAñadirPreguntas"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tucan"
+            android:layout_width="196dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Tucan"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgTucan"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/tucanmanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtTucan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:shadowColor="#C38155"
+            android:text="@string/txtTucan"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/puntuacion"
+            android:layout_width="211dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Puntuacion"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgPuntuacion"
+            android:layout_width="192dp"
+            android:layout_height="64dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/puntuacionmanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtPuntuacion"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/jugar"
+            android:layout_width="211dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Jugar"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgJugar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/jugarmanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtJugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtJugar"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salir"
+            android:layout_width="189dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Salir"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgSalir"
+            android:layout_width="179dp"
+            android:layout_height="61dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/salirmanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtSalir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtSalir"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Manualm"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Manualm"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgManualm"
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/manualmanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtManualm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtManual"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Preguntas"
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Preguntas"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imgPreguntas"
+            android:layout_width="match_parent"
+            android:layout_height="405dp"
+            android:backgroundTint="#FFFFFF"
+            android:backgroundTintMode="add"
+            app:srcCompat="@drawable/preguntasmanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/Pregunta"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Pregunta"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgPregunta"
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/preguntamanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtPregunta"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Respuesta"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/RespuestaT1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgRespuesta"
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/respuestamanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtRespuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtRespuesta"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RespuestaT2"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/RespuestaT2"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgRespuestaT2"
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/respuesta2manual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtRespuestaT2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtRespuestaT2"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RespuestaT3"
+            android:layout_width="240dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/RespuestaT3"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgRespuestaT3"
+            android:layout_width="219dp"
+            android:layout_height="156dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/respuesta3manual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtRespuestaT3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtRespuestaT3"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IconoVolver"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/IconoVolver"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgVolver"
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/volvermanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtVolver"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IconoSiguiente"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/IconoSiguiente"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgSiguiente"
+            android:layout_width="169dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/siguientemanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtSiguiente"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+</ScrollView>

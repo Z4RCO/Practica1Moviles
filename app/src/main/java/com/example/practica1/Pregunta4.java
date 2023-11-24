@@ -28,6 +28,7 @@ public class Pregunta4 extends Fragment {
      */
     private View view;
 
+    String respuestaCorrecta;
 
     public Pregunta4() {
 
@@ -66,9 +67,7 @@ public class Pregunta4 extends Fragment {
             return;
         }
 
-        String respuestaSeleccionada = selectedRadioButton.getText().toString();
-        String respuestaCorrecta = "Ballena azul";
-
+        String respuestaSeleccionada = String.valueOf(selectedRadioButton.getText());
 
         if (respuestaSeleccionada.equals(respuestaCorrecta)) {
             Toast.makeText(getActivity(),"¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
@@ -105,6 +104,10 @@ public class Pregunta4 extends Fragment {
         respuesta.setText(preguntas.getString(3));
         respuesta = view.findViewById(R.id.r14);
         respuesta.setText(preguntas.getString(4));
+
+        int correcto = Integer.parseInt(preguntas.getString(5));
+        respuestaCorrecta = preguntas.getString(correcto);
+
 
         preguntas.close();
     }

@@ -28,6 +28,9 @@ public class Pregunta5 extends Fragment {
      */
     private View view;
 
+    String respuestaCorrecta;
+
+
 
     public Pregunta5() {
 
@@ -65,8 +68,7 @@ public class Pregunta5 extends Fragment {
             return;
         }
 
-        String respuestaSeleccionada = selectedRadioButton.getText().toString();
-        String respuestaCorrecta = "Sapo";
+        String respuestaSeleccionada = String.valueOf(selectedRadioButton.getText());
 
 
         if (respuestaSeleccionada.equals(respuestaCorrecta)) {
@@ -103,6 +105,9 @@ public class Pregunta5 extends Fragment {
         respuesta.setText(preguntas.getString(3));
         respuesta = view.findViewById(R.id.r14);
         respuesta.setText(preguntas.getString(4));
+
+        int correcto = Integer.parseInt(preguntas.getString(5));
+        respuestaCorrecta = preguntas.getString(correcto);
 
         preguntas.close();
     }

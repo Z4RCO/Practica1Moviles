@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Wild Quest</string>
     <string name="puntosText">Puntuación: </string>
     <string name="titulo">Wild Quest</string>
@@ -14,7 +14,6 @@
     <string name="respuesta4">Escribir respuesta 4</string>
 
 
-
     <!--Botones-->
     <string name="buttonVolver">Volver</string>
     <string name="buttonSilenciar">Silenciar música</string>
@@ -25,9 +24,6 @@
 
     <string name="buttonManual">Manual</string>
     <string name="buttonAdd">Add</string>
-
-
-
 
 
     <!-- Pregunta 1 -->
@@ -48,7 +44,6 @@
     <string name="r24">Liebre</string>
 
 
-
     <!--Pregunta 3-->
     <string name="p3">¿Qué ave es conocida por su canto melodioso?</string>
 
@@ -58,7 +53,6 @@
         <item>Ruiseñor</item><!--Correcta-->
         <item>Tucán</item>
     </string-array>
-
 
 
     <!-- Pregunta 4-->
@@ -78,6 +72,39 @@
     <string name="r53">Salamandra</string>
     <string name="r54">Tortuga</string>
 
+    <!-- Manual -->
+    <string name="Manual">Manual</string>
+
+    <string name="Menu">Menu</string> <!-- Correcta-->
+    <string name="Sonido">Sonido</string>
+    <string name="txtSonido">El sonido se ubica en la esquina superior izquierda y sirve para mutearlo o volver a ponerlo presionando sobre el</string>
+    <string name="AddPregunta">Añadir pregunta</string>
+    <string name="txtAñadirPreguntas">El icono se ubica en la esquina superior derecha y sirve para ir a una pagina donde añadir preguntas a la base de datos</string>
+    <string name="Tucan">Tucan</string>
+    <string name="txtTucan">Botón oculto creado para los más curiosos que genera el sonido de un tucán</string>
+    <string name="Puntuacion">Puntuacion</string>
+    <string name="txtPuntuacion">Indica la puntuación del jugador en su último intento</string>
+    <string name="Jugar">Jugar</string>
+    <string name="txtJugar">Al pulsar inicia la quest de preguntas</string>
+    <string name="Manualm">Manual</string>
+    <string name="txtManual">Al pulsarlo nos lleva al manual para conocer el funcionamiento de la aplicación</string>
+    <string name="Salir">Salir</string>
+    <string name="txtSalir">Al pulsar nos saca de la aplicación cerrando todos los procesos, música incluida</string>
+    <string name="Preguntas">Preguntas</string>
+    <string name="Pregunta">Pregunta</string>
+    <string name="txtPregunta">En este apartado se harán las preguntas</string>
+    <string name="RespuestaT1">Respuesta Tipo 1</string>
+    <string name="txtRespuesta">Cuatro Radiobuttons de los que solo puedes elegir una opción que se validará con un sonido y un pequeño texto</string>
+    <string name="RespuestaT2">Respuesta Tipo 2</string>
+    <string name="txtRespuestaT2">Este es otro tipo de respuesta que consiste en elegir una imagen de cuatro para responder a la pregunta en cuestión</string>
+    <string name="RespuestaT3">Respuesta Tipo 3</string>
+    <string name="txtRespuestaT3">Este es el último tipo de pregunta, consiste en un spinner desplegable con cuatro opciones para responder a la pregunta</string>
+    <string name="IconoVolver">Icono Volver</string>
+    <string name="txtVolver" tools:ignore="Typos">Este icono te permite volver al menú en cualquier momento,conservando eso sí tu puntuación actual</string>
+    <string name="IconoSiguiente">Icono Siguiente</string>
+    <string name="txtSiguiente">Este es el último tipo de pregunta, consiste en un spinner desplegable con cuatro opciones para responder a la pregunta</string>
+
+    <string name="buttonGuardar">Guardar</string>
 
 
 </resources>

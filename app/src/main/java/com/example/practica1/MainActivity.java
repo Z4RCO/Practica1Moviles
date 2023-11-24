@@ -1,24 +1,21 @@
 package com.example.practica1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ActivityOptions;
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer musica;
     private MediaPlayer tucan;
     private boolean activo = true;
+    private int puntos;
 
 
 
@@ -48,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView tv = findViewById(R.id.puntos);
-        int num = intent.getIntExtra("puntos",0);
-        tv.setText(String.format(Integer.toString(num)));
+        puntos = intent.getIntExtra("puntos",0);
+        tv.setText(String.format(Integer.toString(puntos)));
     }
 
     /**
@@ -103,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
+    /**
     * Entrar en el Manual
      */
 
@@ -111,6 +108,20 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, ManualActivity.class);
+        intent.putExtra("musica",activo);
+        intent.putExtra("puntos",puntos);
+        if(musica.isPlaying())musica.pause();
+        startActivity(intent, options.toBundle());
+
+    }
+
+    /**
+     * Agregar preguntas
+     */
+    public void AddPreguntas(View view){
+
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
+        Intent intent = new Intent(this, AddPreguntasActivity.class);
         intent.putExtra("musica",activo);
         if(musica.isPlaying())musica.pause();
         startActivity(intent, options.toBundle());

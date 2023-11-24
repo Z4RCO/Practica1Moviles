@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
-        android:id="@+id/buttonSalir"
+        android:id="@+id/buttonVolver"
         android:layout_width="83dp"
         android:layout_height="48dp"
         android:background="@drawable/texto"
@@ -148,7 +148,7 @@
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/buttonAdd"
-        android:onClick="volver"
+        android:onClick="AddPreguntas"
         android:scaleType="centerInside"
         android:src="@drawable/addpregunta"
         app:layout_constraintBottom_toBottomOf="parent"

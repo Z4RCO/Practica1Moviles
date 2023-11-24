@@ -25,6 +25,8 @@ public class Pregunta3 extends Fragment {
      */
     private Spinner spinner;
 
+    String respuestaCorrecta;
+
     List<String> respuestas = new ArrayList<>();
 
 
@@ -68,14 +70,13 @@ public class Pregunta3 extends Fragment {
      */
     public void comprobarRespuesta(){
         String respuestaSeleccionada = (String)spinner.getSelectedItem();
+
         if(respuestaSeleccionada == null){
             Toast.makeText(getActivity(), "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
             PreguntasActivity a = (PreguntasActivity)getActivity();
             if(a != null)a.incorrecto();
             return;
         }
-
-        String respuestaCorrecta = "Ruiseñor";
 
         if (respuestaSeleccionada.equals(respuestaCorrecta)) {
             Toast.makeText(getActivity(),"¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
@@ -104,6 +105,10 @@ public class Pregunta3 extends Fragment {
         respuestas.add(preguntas.getString(2));
         respuestas.add(preguntas.getString(3));
         respuestas.add(preguntas.getString(4));
+
+        int correcto = Integer.parseInt(preguntas.getString(5));
+        respuestaCorrecta = preguntas.getString(correcto);
+
 
         preguntas.close();
     }
