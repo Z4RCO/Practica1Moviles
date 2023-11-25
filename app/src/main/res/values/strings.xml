@@ -72,10 +72,10 @@
     <string name="r53">Salamandra</string>
     <string name="r54">Tortuga</string>
 
-    <!-- Manual -->
+    <!-- Manual con todos sus strings declarados-->
     <string name="Manual">Manual</string>
 
-    <string name="Menu">Menu</string> <!-- Correcta-->
+    <string name="Menu">Menu</string>
     <string name="Sonido">Sonido</string>
     <string name="txtSonido">El sonido se ubica en la esquina superior izquierda y sirve para mutearlo o volver a ponerlo presionando sobre el</string>
     <string name="AddPregunta">Añadir pregunta</string>
@@ -104,6 +104,9 @@
     <string name="IconoSiguiente">Icono Siguiente</string>
     <string name="txtSiguiente">Este es el último tipo de pregunta, consiste en un spinner desplegable con cuatro opciones para responder a la pregunta</string>
 
+
+
+    <!--AddPreguntas con todos sus strings declarados-->
     <string name="buttonGuardar">Guardar</string>
 
 

@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 
+/**Funcionalidad del botón volver, manejo de la musica**/
 
 public class ManualActivity extends AppCompatActivity {
     boolean activo;

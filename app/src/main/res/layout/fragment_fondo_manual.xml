@@ -5,3 +5,5 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondoquest"
     tools:context=".FondoManualFragment" />
+
+<!--fondo para que el scroll se vea bien y no sobresalga del mismo -->

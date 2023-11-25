@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Agrega contenido, como TextViews -->
+        <!-- Aquí tenemos toda la interfaz del scroll y su contenido tanto de titulos, imágenes y texto -->
 
 
         <TextView

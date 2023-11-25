@@ -7,7 +7,7 @@
     android:background="@drawable/preguntas"
     tools:context=".ManualActivity">
 
-
+<!--Aquí tenemos el botón volver y el fragment -->
     <Button
         android:id="@+id/buttonVolver"
         android:layout_width="83dp"
