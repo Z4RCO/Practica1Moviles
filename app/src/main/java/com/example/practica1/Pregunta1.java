@@ -91,7 +91,7 @@ public class Pregunta1 extends Fragment {
 
 
         Random r = new Random();
-
+        System.out.println(preguntas.getCount());
         preguntas.moveToPosition(r.nextInt(preguntas.getCount()));
 
         TextView t = view.findViewById(R.id.p4);

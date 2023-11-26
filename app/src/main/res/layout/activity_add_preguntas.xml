@@ -40,81 +40,96 @@
         tools:ignore="TextSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/etPregunta"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:height="80sp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/addPregunta"
         android:inputType="textLongMessage"
         android:minHeight="48dp"
-        android:text="@string/addPregunta"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="@+id/fragmentContainerView3" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/etRespuesta1"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:ems="10"
+        android:hint="@string/respuesta1"
         android:inputType="textShortMessage"
         android:minHeight="48dp"
-        android:text="@string/respuesta1"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPregunta"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etRespuesta2"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/respuesta2"
+        android:inputType="textShortMessage"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/etRespuesta1"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/etRespuesta3"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:ems="10"
+        android:hint="@string/respuesta3"
         android:inputType="textShortMessage"
         android:minHeight="48dp"
-        android:text="@string/respuesta2"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/etRespuesta2"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/etRespuesta4"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:ems="10"
+        android:hint="@string/respuesta4"
         android:inputType="textShortMessage"
         android:minHeight="48dp"
-        android:text="@string/respuesta3"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRespuesta3"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etRespuesta5"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/correcto"
+        android:inputType="textShortMessage"
+        android:minHeight="48dp"
+        android:textColorHint="#3E2723"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentContainerView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/editTextText5"
-        android:layout_width="300sp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
-        android:ems="10"
-        android:inputType="textShortMessage"
-        android:minHeight="48dp"
-        android:text="@string/respuesta4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3"
-        app:layout_constraintVertical_bias="0.925" />
+        app:layout_constraintTop_toBottomOf="@+id/etRespuesta4" />
 
     <Button
         android:id="@+id/buttonVolver"
@@ -132,15 +147,16 @@
 
     <Button
         android:id="@+id/buttonGuardar"
-        android:layout_width="83dp"
+        android:layout_width="85sp"
         android:layout_height="48dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/texto"
-        android:onClick="volver"
+        android:onClick="registrar"
         android:text="@string/buttonGuardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.829"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
