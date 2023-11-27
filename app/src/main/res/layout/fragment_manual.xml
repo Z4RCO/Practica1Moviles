@@ -61,7 +61,8 @@
             android:text="@string/Sonido"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            tools:ignore="TextSizeCheck" />
 
         <ImageView
             android:id="@+id/imgSonido"
@@ -472,6 +473,125 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="@string/txtSiguiente"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/MenuAddPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/MenuAddPregunta"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imgMenuAddPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="405dp"
+            android:backgroundTint="#FFFFFF"
+            android:backgroundTintMode="add"
+            app:srcCompat="@drawable/addmenupreguntamanual"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/addPreg"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/AddMenuPregunta"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgAddPreg"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/anadirpreguntasmenu"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/txtAddPreg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtAddPregunta"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/VolverMenu"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Volver"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgVolverMenu"
+            android:layout_width="177dp"
+            android:layout_height="66dp"
+            android:layout_margin="10dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/volvermenumanual"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/txtVolverMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtVolverMenu"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/Guardar"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Guardar"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgGuardar"
+            android:layout_width="177dp"
+            android:layout_height="66dp"
+            android:layout_margin="10dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/guardarmanual"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/txtguardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/txtGuardar"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

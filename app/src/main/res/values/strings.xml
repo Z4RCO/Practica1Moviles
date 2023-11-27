@@ -104,6 +104,16 @@
     <string name="txtVolver" tools:ignore="Typos">Este icono te permite volver al menú en cualquier momento,conservando eso sí tu puntuación actual</string>
     <string name="IconoSiguiente">Icono Siguiente</string>
     <string name="txtSiguiente">Este es el último tipo de pregunta, consiste en un spinner desplegable con cuatro opciones para responder a la pregunta</string>
+    <string name="MenuAddPregunta">Menú añadir pregunta</string>
+    <string name="AddMenuPregunta">Añadir pregunta</string>
+    <string name="txtAddPregunta">Añadir los campos de la pregunta y las respuestas, agregando la correcta de las cuatro propuestas</string>
+    <string name="Volver">Volver</string>
+    <string name="txtVolverMenu">Al pulsarlo te permite volver al menú si no quieres seguir en la pantalla</string>
+    <string name="Guardar">Guardar</string>
+    <string name="txtGuardar">Al pulsarlo te permite guardar en la base de datos la pregunta creada por el usuario</string>
+
+
+
 
 
 
